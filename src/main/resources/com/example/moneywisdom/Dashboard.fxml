@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneywisdom.DashBoardController">
+   <children>
+      <HBox layoutX="-8.0" layoutY="-9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1089.0" prefWidth="305.0" style="-fx-background-color: #184977;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="1623.0" AnchorPane.topAnchor="-9.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/j.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="MoneyWisdom" wrappingWidth="216.21483612060547">
+               <font>
+                  <Font name="Calibri" size="27.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+            </Text>
+            <VBox prefHeight="990.0" prefWidth="62.0">
+               <HBox.margin>
+                  <Insets top="100.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="296.0" AnchorPane.bottomAnchor="310.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="273.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-alignment: center-left;" styleClass="menu-lateral" text="Dashboard">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/k.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" layoutX="7.0" layoutY="-7.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Trade" prefHeight="56.0" prefWidth="273.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-alignment: center-left;" styleClass="menu-lateral" text="Transações Báncarias">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/g.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" layoutX="22.0" layoutY="487.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Expenses" prefHeight="56.0" prefWidth="273.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-alignment: center-left;" styleClass="menu-lateral" text="Despesas">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/c.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="450.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="300.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="1548.0">
+         <children>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" top="17.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/7.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="36.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: #333333; -fx-padding: 5 0 0 5;" styleClass=".title" text="DashBoard">
+               <HBox.margin>
+                  <Insets top="17.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/43.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="1120.0" top="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" styleClass="img_icon">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/6.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="25.0" right="25.0" top="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" styleClass="img_icon">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/image_solo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="298.0" layoutY="105.0" prefHeight="100.0" prefWidth="1619.0">
+         <children>
+            <Label opacity="0.66" text="Bom dia">
+               <HBox.margin>
+                  <Insets left="45.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="10.0" styleClass=".title" text="Lisandro!">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-60.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/m.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <BorderPane layoutX="296.0" layoutY="166.0" prefHeight="895.0" prefWidth="1624.0">
+         <center>
+            <GridPane hgap="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="334.0" prefWidth="953.0" vgap="50.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="522.0" minWidth="10.0" prefWidth="518.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.0" minWidth="10.0" prefWidth="525.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <BorderPane.margin>
+                  <Insets left="-50.0" top="-220.0" />
+               </BorderPane.margin>
+               <children>
+                  <VBox prefHeight="294.0" prefWidth="396.0" style="-fx-border-color: #0000; -fx-border-radius: 5; -fx-border-width: 10; -fx-background-color: #ffffff; -fx-background-radius: 5; -fx-padding: 3;">
+                     <children>
+                        <Label text="LUCROS E PERDAS">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox id="timePeriodComboBox" fx:id="timePeriodComboBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="136.0" promptText="Ultimos 30 dias" style="-fx-padding: 5;">
+                           <VBox.margin>
+                              <Insets left="270.0" top="-25.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label layoutX="35.0" layoutY="25.0" text="-R$ 123">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label opacity="0.66" text="Lucro liquido dos ultimos 30 dias">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="25.0" text="R$ 0">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label opacity="0.66" text="Receita mensal">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="55.0" text="R$ 123">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label opacity="0.66" prefHeight="31.0" prefWidth="111.0" text="Despesas">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar prefWidth="200.0" progress="1.0" style="-fx-background-color: #5853ED; -fx-background-radius: 5;">
+                           <VBox.margin>
+                              <Insets left="100.0" top="-50.0" />
+                           </VBox.margin>
+                           <effect>
+                              <DropShadow height="0.0" radius="0.0" width="0.0" />
+                           </effect>
+                        </ProgressBar>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.5" radius="2.125" width="10.0" />
+                     </effect>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="318.0" prefWidth="392.0" style="-fx-border-color: #0000; -fx-border-radius: 5; -fx-border-width: 10; -fx-background-color: #ffffff; -fx-background-radius: 5; -fx-padding: 3;" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="DESPESAS">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox id="timePeriodComboBox" fx:id="timePeriodComboBox" prefHeight="35.0" prefWidth="129.0" promptText="Este mês">
+                           <VBox.margin>
+                              <Insets left="300.0" top="-25.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label text="-R$ 123">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label opacity="0.66" text="Este mês">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="25.0" />
+                           </VBox.margin>
+                        </Label>
+                        <PieChart fx:id="piechart" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="160.0" prefWidth="163.0" startAngle="300.0" title="0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </PieChart>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.5" radius="2.125" width="10.0" />
+                     </effect>
+                  </VBox>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <HBox prefHeight="112.0" prefWidth="1624.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label opacity="0.66" text="Receita mensal">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label style="-fx-text-fill: #19A906;" text="R$ 7.000,00">
+                     <HBox.margin>
+                        <Insets left="-194.0" top="-10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" opacity="0.66" text="Despesas mensais">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="10.0" style="-fx-text-fill: #CC0808;" text="R$ 5.000,00">
+                     <HBox.margin>
+                        <Insets left="-130.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/n.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="140.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label opacity="0.66" text="Relatorios">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="621.0" layoutY="20.0" opacity="0.66" text="Acesso Rapido">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="420.0" top="-60.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="288.0" spacing="40.0">
+                     <HBox.margin>
+                        <Insets left="-150.0" top="-10.0" />
+                     </HBox.margin>
+                     <children>
+                        <Pane prefHeight="91.0" prefWidth="65.0" style="-fx-border-color: #B8AEAE; -fx-border-radius: 10;">
+                           <children>
+                              <Line endX="25.3333740234375" layoutX="30.0" layoutY="46.0" startX="-19.3333740234375" stroke="#cc0808" strokeMiterLimit="15.0" strokeWidth="2.0" />
+                              <Text layoutX="6.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Despesa">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane prefHeight="91.0" prefWidth="65.0" style="-fx-border-color: #B8AEAE; -fx-border-radius: 10;">
+                           <children>
+                              <Text layoutX="9.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receita">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="25.3333740234375" layoutX="31.0" layoutY="45.0" startX="-19.3333740234375" stroke="#19a906" strokeMiterLimit="15.0" strokeWidth="2.0" />
+                              <Line endX="-19.3333740234375" endY="36.0" layoutX="52.0" layoutY="28.0" startX="-19.3333740234375" stroke="#19a906" strokeMiterLimit="15.0" strokeWidth="2.0" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Pane>
+                        <Pane prefHeight="91.0" prefWidth="65.0" style="-fx-border-color: #B8AEAE; -fx-border-radius: 10;">
+                           <children>
+                              <Line endX="-16.6666259765625" endY="-1.52587890625E-5" layoutX="71.0" layoutY="58.0" startX="-57.3333740234375" startY="-1.52587890625E-5" stroke="#b8aeae" />
+                              <Line endX="-100.0001220703125" endY="21.414260864257812" layoutX="134.0" layoutY="24.0" startX="-100.0001220703125" startY="-6.6666717529296875" stroke="#b8aeae" />
+                              <Line endX="-91.2928466796875" endY="18.121353149414062" layoutX="126.0" layoutY="28.0" startX="-77.0" startY="3.3333282470703125" stroke="#b8aeae" />
+                              <Line endX="-76.9998779296875" endY="33.82847595214844" layoutX="111.0" layoutY="13.0" startX="-90.6666259765625" startY="18.333328247070312" stroke="#b8aeae" />
+                              <Text layoutX="11.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transf." wrappingWidth="47.7917166352272">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <Pane prefHeight="227.0" prefWidth="1624.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="355.0" layoutY="-167.0" prefHeight="362.0" prefWidth="386.0" style="-fx-border-color: #0000; -fx-border-radius: 5; -fx-border-width: 10; -fx-background-color: #ffffff; -fx-background-radius: 5; -fx-padding: 3;">
+                     <children>
+                        <Label text="FATURAS">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="R$ 11800 Não Paga">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label opacity="0.66" text=" Últimos 365 dias">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="215.0" top="-20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="56.0" text="R$ 11800">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="116.0" text="R$ 0">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="250.0" top="-25.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="56.0" opacity="0.66" text=" Últimos 365 dias">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="56.0" opacity="0.66" text="Em dia">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="250.0" top="-20.0" />
+                           </padding>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c68007" height="27.0" stroke="#e8e8e8" strokeType="INSIDE" width="358.0" />
+                        <Label layoutX="43.0" layoutY="116.0" text="R$ 0 Paga">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="56.0" opacity="0.66" text=" Últimos 30 dias">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="225.0" top="-20.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.5" radius="2.125" width="10.0" />
+                     </effect>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="40.0" />
+               </BorderPane.margin>
+            </Pane>
+         </bottom>
+         <right>
+            <Pane prefHeight="542.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="-64.0" layoutY="-18.0" minWidth="-Infinity" prefHeight="702.0" prefWidth="450.0" style="-fx-border-color: #0000; -fx-border-radius: 5; -fx-border-width: 10; -fx-background-color: #ffffff; -fx-background-radius: 5; -fx-padding: 5;" styleClass="card">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.5" radius="2.125" width="10.0" />
+                     </effect>
+                     <padding>
+                        <Insets top="-130.0" />
+                     </padding>
+                     <children>
+                        <Label text="CONTAS BANCÁRIAS" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/s.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="361.0" top="-30.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label prefHeight="21.0" prefWidth="351.0" text="Banco cooperativa  de crédito banco">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label opacity="0.66" text="Bradesco">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="89.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.66" text="R$10.577,00">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="222.0" top="-21.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="289.29290771484375" endY="-1.7380714416503906E-4" startX="-100.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Line>
+                        <Label layoutX="25.0" layoutY="68.0" prefHeight="21.0" prefWidth="351.0" text="Banco Itau">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="89.0" opacity="0.66" text="Bradesco">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="109.0" opacity="0.66" text="R$10.577,00">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="222.0" top="-21.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="289.29290771484375" endY="-1.7380714416503906E-4" layoutX="126.0" layoutY="120.0" startX="-100.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Line>
+                        <Label layoutX="25.0" layoutY="121.0" prefHeight="21.0" prefWidth="351.0" text="Banco cooperativa  de crédito banco">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="142.0" opacity="0.66" text="Bradesco">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="162.0" opacity="0.66" text="R$10.577,00">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="222.0" top="-21.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="289.29290771484375" endY="-1.7380714416503906E-4" layoutX="126.0" layoutY="163.0" startX="-100.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

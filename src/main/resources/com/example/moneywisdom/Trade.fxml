@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneywisdom.TradeController">
+   <children>
+      <HBox layoutX="-8.0" layoutY="-9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1089.0" prefWidth="305.0" style="-fx-background-color: #184977;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="1623.0" AnchorPane.topAnchor="-9.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/j.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="MoneyWisdom" wrappingWidth="216.21483612060547">
+               <font>
+                  <Font name="Calibri" size="27.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+            </Text>
+            <VBox prefHeight="990.0" prefWidth="62.0">
+               <HBox.margin>
+                  <Insets top="100.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="296.0" AnchorPane.bottomAnchor="310.0" AnchorPane.topAnchor="81.0">
+         <children>
+            <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Dashboard" prefHeight="56.0" prefWidth="273.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-alignment: center-left;" styleClass="menu-lateral" text="Dashboard">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/k.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" layoutX="7.0" layoutY="-7.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="56.0" prefWidth="273.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-alignment: center-left;" styleClass="menu-lateral" text="Transações Báncarias">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/g.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" layoutX="22.0" layoutY="487.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Expenses" prefHeight="56.0" prefWidth="273.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-alignment: center-left;" styleClass="menu-lateral" text="Despesas">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/c.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="450.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="300.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="1621.0">
+         <children>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" top="17.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/v.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="36.0" prefWidth="262.0" style="-fx-font-weight: bold; -fx-text-fill: #333333; -fx-padding: 5 0 0 5;" styleClass=".title" text="Transações Bancarias">
+               <HBox.margin>
+                  <Insets top="17.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/43.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="1050.0" top="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" styleClass="img_icon">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/6.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="25.0" right="25.0" top="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" styleClass="img_icon">
+               <image>
+                  <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/image_solo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <Pane layoutX="347.0" layoutY="110.0" prefHeight="918.0" prefWidth="1512.0">
+         <children>
+            <VBox layoutX="-1.0" layoutY="9.0" prefHeight="839.0" prefWidth="1512.0" style="-fx-border-color: #0000; -fx-border-radius: 5; -fx-border-width: 10; -fx-background-color: #ffffff; -fx-background-radius: 5; -fx-padding: 20; -fx-spacing: 10;">
+               <children>
+                  <HBox opacity="0.84" prefHeight="76.0" prefWidth="1452.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 5; -fx-border-color: black; -fx-border-width: 0.4;">
+                     <children>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/f.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label contentDisplay="TOP" opacity="0.39" text="Total da sua carteira">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="50.0" left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="34.0" prefWidth="123.0" text="R$ 1.050">
+                           <HBox.margin>
+                              <Insets left="-120.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox opacity="0.84" prefHeight="76.0" prefWidth="1452.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;">
+                     <children>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/d.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Pix Transferido">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label text="**** 1234">
+                           <HBox.margin>
+                              <Insets left="800.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1054.0" layoutY="49.0" text="-500,00 BRL" textFill="#eb0000">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="190.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="40.0" layoutY="150.0" opacity="0.84" prefHeight="76.0" prefWidth="200.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;" />
+                  <HBox layoutX="40.0" layoutY="260.0" opacity="0.84" prefHeight="76.0" prefWidth="200.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;" />
+                  <HBox layoutX="40.0" layoutY="370.0" opacity="0.84" prefHeight="76.0" prefWidth="200.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;" />
+                  <HBox prefHeight="277.0" prefWidth="1452.0">
+                     <children>
+                        <GridPane hgap="150.0" prefHeight="267.0" prefWidth="1452.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="662.0" minWidth="10.0" prefWidth="638.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="686.0" minWidth="10.0" prefWidth="664.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="360.0" prefWidth="400.0" style="-fx-border-color: #0000; -fx-border-radius: 5; -fx-border-width: 10; -fx-background-color: #ffffff; -fx-background-radius: 5; -fx-padding: 3;">
+                                 <children>
+                                    <Label prefHeight="23.0" prefWidth="390.0" text="Registro de gastos no cartão">
+                                       <font>
+                                          <Font name="Arial Bold" size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.84" prefHeight="50.0" prefWidth="583.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;">
+                                       <children>
+                                          <Label text="**** ****  **** 0000">
+                                             <font>
+                                                <Font name="Arial Bold" size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/f.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="330.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="30.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="33.0" prefWidth="260.0" style="-fx-background-color: #14469C; -fx-background-radius: 20;" text="Adicionar cartão" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets left="330.0" top="23.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <HBox layoutX="23.0" layoutY="76.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.84" prefHeight="33.0" prefWidth="240.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;">
+                                       <VBox.margin>
+                                          <Insets top="-34.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets left="200.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/w.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="56.0" prefWidth="202.0">
+                                       <children>
+                                          <ImageView fitHeight="88.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/x.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <ImageView fitHeight="88.0" fitWidth="72.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/x.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="30.0" top="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="56.0" prefWidth="202.0">
+                                       <VBox.margin>
+                                          <Insets left="300.0" top="-70.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <ImageView fitHeight="88.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/z.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="100.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <ImageView fitHeight="88.0" fitWidth="72.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/z.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" height="0.5" radius="2.125" width="10.0" />
+                                 </effect>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="362.0" prefWidth="386.0" style="-fx-border-color: #0000; -fx-border-radius: 5; -fx-border-width: 10; -fx-background-color: #ffffff; -fx-background-radius: 5; -fx-padding: 3;" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label prefHeight="23.0" prefWidth="309.0" text="Registro de gastos diversos">
+                                       <font>
+                                          <Font name="Arial Bold" size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox minHeight="-Infinity" minWidth="-Infinity" opacity="0.84" prefHeight="50.0" prefWidth="551.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;">
+                                       <children>
+                                          <Label text="PIX">
+                                             <font>
+                                                <Font name="Arial Bold" size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/1.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="500.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="33.0" prefWidth="260.0" style="-fx-background-color: #14469C; -fx-background-radius: 20;" text="Adicionar Gasto" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="270.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <HBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.84" prefHeight="33.0" prefWidth="240.0" spacing="10.0" style="-fx-alignment: center-left; -fx-spacing: 10; -fx-border-radius: 20; -fx-border-color: black; -fx-border-width: 0.4;">
+                                       <children>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets left="200.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="file:/C:/Users/Lisandro/IdeaProjects/MoneyWisdom/src/main/archives/icons_menu/w.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="-32.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" height="0.5" radius="2.125" width="10.0" />
+                                 </effect>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="0.5" radius="2.125" width="10.0" />
+               </effect>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
